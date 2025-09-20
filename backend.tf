@@ -1,0 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket       = "terra-jenkins-state-kishor-2025" # <-- match your actual bucket
+    key          = "ec2-project/terraform.tfstate"
+    region       = "eu-west-1"
+    encrypt      = true
+    use_lockfile = true
+    profile      = "default"
+  }
+}
+
